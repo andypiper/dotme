@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      href="https://gravatar.com/avatar/d33e6fe38426aba6431cd4e9c3609a0c6ba480813a7e2d5987170bf015d5b8c7?size=32"
+    />
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+
+
+    <!--
+       You found me! Hi there!
+
+                ,/   __.,
+           _   / \.-‘  (__
+          _>’-‘           “”--.,_
+        <`                     <`
+        /      __               \
+       |    .-‘   ’’--.._        |
+       |  .’              ’-.    |
+       | /                    ‘. |
+       |/                       \|
+      .|/“””””””””\ _ /“””””””””\|.
+     (  |  (8)    /"""\    (8)  |  )
+      ‘-\________/     \________/-'
+         \      .       ,      /
+          '.     "-----"     .'
+            '-._         _.-'
+                 ` --- `     sjw
+
+    -->
+
+
+    <!-- PWA requirements-->
+    <meta name="theme-color" content="#708090ff" />
+    <link
+      rel="apple-touch-icon"
+      href="https://gravatar.com/avatar/d33e6fe38426aba6431cd4e9c3609a0c6ba480813a7e2d5987170bf015d5b8c7?size=512"
+    />
+    <link type="text/plain" rel="author" href="humans.txt" />
+
+    <!-- PWA setup - update public/sw.js if you add your own assets like a new .css file -->
+    <link rel="manifest" href="manifest.json" />
+    <script>
+      if (location.protocol == "http:") location.protocol = "https:";
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("sw.js")
+          .then((reg) => console.log("Service Worker registered", reg))
+          .catch((err) =>
+            console.error("Service Worker **not** registered", err)
+          );
+      } else {
+        console.warn("Service Worker not supported in this browser");
+      }
+    </script>
+    
+    <!-- TODO: performance; pre-connects -->
+
+    <!-- HEAD-CONTENT -->
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <div id="content" class="content" role="main">
+          <!-- BODY-CONTENT -->
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

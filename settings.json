@@ -1,0 +1,130 @@
+{
+  "metaTitle": "Andy Piper's links",
+  "metaDescription": "Links to interesting things Andy Piper is doing",
+  "name": "Andy Piper",
+  "bio": "⬩ Plotter Art ⬩ Open Source ⬩ Fediverse ⬩ Community ⬩",
+  "theme": "dusky-lory-2",
+  "creator": "andypiper@macaw.social",
+  "avatarImage": "https://www.gravatar.com/avatar/1526dcb784188b422544c6344ef223c2?s=200",
+  "avatarImageAlt": "https://www.gravatar.com/avatar/6aaa5c1546fbb551213db3b3cd533e9f?s=200",
+  "favicon": "https://www.gravatar.com/avatar/6aaa5c1546fbb551213db3b3cd533e9f?s=32",
+  "links": [
+    {
+      "url": "https://andypiper.url.lol/fediintro",
+      "text": "👋🏻 By way of introduction",
+      "img": "",
+      "altText": ""
+    },
+    {
+      "url": "https://andypiper.url.lol/macaw",
+      "text": "🌀 In the Fediverse",
+      "img": "",
+      "altText": ""
+    },
+    {
+      "url": "https://andypiper.url.lol/studio",
+      "text": "🧑🏻‍🏭️ Our studio: Forge & Craft",
+      "img": "",
+      "altText": ""
+    },
+    {
+      "url": "https://andypiper.url.lol/podcast",
+      "text": "🎧 Weekly podcast: Games at Work dot Biz",
+      "img": "",
+      "altText": ""
+    },
+    {
+      "url": "https://andypiper.url.lol/mhealth",
+      "text": "🧠️ [Medium] On living with the feelings in my head",
+      "img": "",
+      "altText": ""
+    },
+    {
+      "url": "https://andypiper.omg.lol",
+      "text": "🩷️ OMG LOL (my other landing page)",
+      "img": "",
+      "altText": ""
+    },
+    {
+      "url": "https://andypiper.co.uk",
+      "text": "🌐 My personal blog",
+      "img": "",
+      "altText": ""
+    },
+    {
+      "url": "https://calendly.com/andypiper/andy-piper-consultation",
+      "text": "📅 Book time on my calendar",
+      "img": "",
+      "altText": ""
+    },
+    {
+      "url": "https://andypiper.url.lol/kofi",
+      "text": "☕ Buy me a coffee",
+      "img": "",
+      "altText": ""
+    },
+    {
+      "url": "https://andypiper.url.lol/amazonwl",
+      "text": "🎁 My wishlist",
+      "img": "",
+      "altText": ""
+    },
+    {
+      "url": "https://andypiper.url.lol/fff",
+      "text": "🥳 Fediverse for Freedom",
+      "img": "",
+      "altText": ""
+    }
+  ],
+  "social": {
+    "spotify": "",
+    "devTo": "https://dev.to/andypiper",
+    "facebook": "",
+    "github": "https://github.com/andypiper",
+    "gitlab": "https://gitlab.com/andypiper",
+    "replit": "https://replit.com/@andypiper",
+    "hashnode": "",
+    "instagram": "https://instagram.com/andypiper",
+    "keybase": "",
+    "pinboard": "",
+    "tumblr": "https://tumblr.andypiper.co.uk/",
+    "linkedin": "https://linkedin.com/in/andypiperuk/",
+    "medium": "https://andypiper.medium.com",
+    "patreon": "",
+    "kofi": "https://ko-fi.com/andypiper",
+    "pinterest": "",
+    "youtube": "https://youtube.com/@andypiper",
+    "twitch": "https://twitch.tv/andypiper",
+    "tiktok": "",
+    "podcast": "https://gamesatwork.biz",
+    "soundcloud": "https://soundcloud.com/andypiper",
+    "bandcamp": "https://bandcamp.com/andypiper",
+    "mastodon": "https://macaw.social/@andypiper",
+    "email": "",
+    "buttondown": "https://buttondown.email/andypiper",
+    "letterboxd": "https://letterboxd.com/andypiper/",
+    "statuslol": "https://status.lol/andypiper",
+    "bluesky": "https://bsky.app/profile/andypiper.me",
+    "threads": "https://threads.net/@andypiper",
+    "pixelfed": "https://pixelfed.social/@andypiper",
+    "bookwyrm": "https://bookrastinating.com/@andypiper",
+    "peertube": "https://makertube.net/a/andypiper",
+    "codeberg": "https://codeberg.org/andypiper",
+    "lemmy": "https://lemmy.world/u/andypiper",
+    "hackaday": "https://hackaday.io/andypiper",
+    "flipboard": "https://flipboard.com/@andypiper",
+    "itchio": "https://andypiper.itch.io/",
+    "lexaloffle": "https://www.lexaloffle.com/bbs/?uid=52301",
+    "wordpress": "https://andypiper.co.uk",
+    "friendica": "https://venera.social/profile/andypiper",
+    "applemusic": "https://music.apple.com/profile/andypiper",
+    "lastfm": "https://www.last.fm/user/andypiper",
+    "steam": "https://steamcommunity.com/id/andypiper",
+    "xbox": "",
+    "psn": "",
+    "bgg": "https://boardgamegeek.com/user/andypiper",
+    "flickr": "https://www.flickr.com/photos/andypiper/",
+    "matrix": "https://matrix.to/#/@andypiper:matrix.org",
+    "keyoxide": "https://keyoxide.org/aspe:keyoxide.org:JQTSX3JMH2G6U6UAUH5VPUP4SE"
+  }
+}
