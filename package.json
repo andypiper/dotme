@@ -14,7 +14,7 @@
     "minimist": "^1.2.6",
     "node-fetch": "^2.7.0",
     "postcss": "^8.4.38",
-    "vite": "^4.5.5"
+    "vite": "^7.0.3"
   },
   "browserslist": [
     ">0.2%",
