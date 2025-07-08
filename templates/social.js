@@ -1,7 +1,5 @@
-// REMOVED: import settings from "../settings.json";
 import { SVGs } from "./social-svgs.js"; // Note: ensure this file path is correct and it exports SVGs correctly
 
-// This function now accepts 'settings' and the specific 'platform'
 function renderSocial(settings, platform) {
   // Check that this platform exists in the settings
   if (settings.social && settings.social[platform.name]) {
@@ -19,7 +17,6 @@ function renderSocial(settings, platform) {
   return ''; // Return an empty string if the social link doesn't exist
 }
 
-// This function now accepts 'settings'
 function renderEmail(settings) {
   if (settings.social && settings.social.email) {
     return `
@@ -39,7 +36,6 @@ const socials = [
     { name: "mastodon", altText: "Mastodon", rel: "me" },
     { name: "pixelfed", altText: "Pixelfed" },
     { name: "podcast", altText: "Podcast" },
-    { name: "glitch", altText: "Glitch" },
     { name: "threads", altText: "Threads" },
     { name: "applemusic", altText: "Apple Music" },
     { name: "lastfm", altText: "Last.FM" },
@@ -77,14 +73,12 @@ const socials = [
     { name: "replit", altText: "Replit" },
     { name: "spotify", altText: "Spotify" },
     { name: "soundcloud", altText: "Soundcloud" },
-    { name: "stackOverflow", altText: "Stack Overflow" },
     { name: "steam", altText: "Steam" },
     { name: "substack", altText: "Substack" },
     { name: "tiktok", altText: "TikTok" },
     { name: "twitch", altText: "Twitch" },
     { name: "tumblr", altText: "Tumblr" },
     { name: "wordpress", altText: "WordPress" },
-    { name: "X", altText: "X" },
     { name: "youtube", altText: "YouTube" },
     { name: "bandcamp", altText: "Bandcamp" }
 ];
@@ -97,7 +91,6 @@ function shuffleArray(array) {
   return array;
 }
 
-// The main export now accepts 'settings'
 export const renderSocialIcons = (settings) => {
   // Create a copy of the socials array before shuffling
   const shuffledSocials = shuffleArray([...socials]);

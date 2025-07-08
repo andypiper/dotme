@@ -1,0 +1,30 @@
+[Unit]
+Description=dotme application
+After=network.target
+
+[Service]
+User=andyp
+Group=andyp
+
+WorkingDirectory=/home/andyp/dotme
+
+# The command to start the application using nvm and npm
+# This sources the nvm script to set up the environment, then runs 'npm start'
+# Note: Adjust the path to nvm.sh if your installation is different
+ExecStart=/bin/bash -c "source /home/andyp/.nvm/nvm.sh && npm start"
+
+# Set the environment to production
+Environment=NODE_ENV=production
+
+# Automatically restart the service if it fails
+Restart=always
+RestartSec=10
+
+# Standard output and error logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=dotme
+
+[Install]
+WantedBy=multi-user.target
+

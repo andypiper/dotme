@@ -16,7 +16,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const port = 3001;
+const port = 3000;
 
 // Define placeholders as constants to prevent typos
 const BODY_PLACEHOLDER = '<!-- BODY-CONTENT -->';
@@ -66,6 +66,30 @@ app.get('/', async (req, res) => {
 
     } catch (error) {
         console.error('Error rendering page:', error);
+        res.status(500).send('Server error');
+    }
+});
+
+// Catch-all 404 handler - MUST be the last route
+app.use(async (req, res, next) => {
+    try {
+        const [template404, settings] = await Promise.all([
+            fs.readFile(path.join(__dirname, 'public', '404.html'), 'utf-8'),
+            fs.readFile(path.join(__dirname, 'settings.json'), 'utf-8').then(JSON.parse)
+        ]);
+
+        const headContent = renderMeta(settings);
+        const headerHtml = renderHeader(settings);
+        const footerHtml = renderFooter();
+
+        const finalHtml = template404
+            .replace(HEAD_PLACEHOLDER, headContent)
+            .replace('<!-- HEADER_PLACEHOLDER -->', headerHtml)
+            .replace('<!-- FOOTER_PLACEHOLDER -->', footerHtml);
+
+        res.status(404).send(finalHtml);
+    } catch (error) {
+        console.error('Error rendering 404 page:', error);
         res.status(500).send('Server error');
     }
 });
