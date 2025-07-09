@@ -2,19 +2,13 @@ export const renderMeta = (settings) => `
   <title>${settings.metaTitle}</title>
 
   <!-- Web Monetization -->
+  <!-- should be configurable in settings.json -->
   <meta name="monetization" content="$ilp.uphold.com/xkwmiyHi47Rw">
 
   <!-- analytics -->
-  <!-- Google tag (gtag.js) -->
   <!-- should be configurable in settings.json -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKZGDYRC6J"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GKZGDYRC6J');
-  </script>
+  <script data-goatcounter="https://dotme.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 
   <!-- OpenGraph/Social sharing -->
 
@@ -34,9 +28,10 @@ export const renderMeta = (settings) => `
     <meta property="og:type" content="website" />
     <meta property="fediverse:creator" content="${settings.creator}">
 
+    <!-- should be configurable in settings.json -->
     <link href="https://andypiper.org" rel="me"/>
     <link href="https://macaw.social/@andypiper" rel="me"/>
 
-  <!-- Load our custom theme -->
+  <!-- Load the configured custom theme -->
   <link rel="stylesheet" type="text/css" href="./styles/themes/${settings.theme}.css" />
 `;

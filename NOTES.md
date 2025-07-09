@@ -8,6 +8,7 @@ Move from Glitch to my own hosting.
 
 - ✅ is vite needed? or can we just use the static site generator? (NO - removed vite, using server-side rendering)
 - is sw.js useful any more?
+- switch to goatcounter for stats
 - migrate other nice things from wita project
 - add indieweb markup - use indiewebify.me
   - figure out where to add h-card (possibly in header)
