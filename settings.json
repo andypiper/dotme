@@ -7,7 +7,7 @@
   "creator": "andypiper@macaw.social",
   "avatarImage": "https://www.gravatar.com/avatar/1526dcb784188b422544c6344ef223c2?s=200",
   "avatarImageAlt": "https://www.gravatar.com/avatar/6aaa5c1546fbb551213db3b3cd533e9f?s=200",
-  "favicon": "https://www.gravatar.com/avatar/6aaa5c1546fbb551213db3b3cd533e9f?s=32",
+  "favicon": "https://www.gravatar.com/avatar/1526dcb784188b422544c6344ef223c2?s=32",
   "url": "https://andypiper.co.uk",
   "locality": "London",
   "country": "UK",
@@ -108,7 +108,7 @@
     "letterboxd": "https://letterboxd.com/andypiper/",
     "statuslol": "https://status.lol/andypiper",
     "bluesky": "https://bsky.app/profile/andypiper.me",
-    "threads": "https://threads.net/@andypiper",
+    "threads": "https://threads.com/@andypiper",
     "pixelfed": "https://pixelfed.social/@andypiper",
     "bookwyrm": "https://bookrastinating.com/@andypiper",
     "peertube": "https://makertube.net/a/andypiper",
@@ -125,9 +125,14 @@
     "steam": "https://steamcommunity.com/id/andypiper",
     "xbox": "",
     "psn": "",
+    "gog": "https://www.gog.com/u/AndyPiper",
     "bgg": "https://boardgamegeek.com/user/andypiper",
     "flickr": "https://www.flickr.com/photos/andypiper/",
     "matrix": "https://matrix.to/#/@andypiper:matrix.org",
     "keyoxide": "https://keyoxide.org/aspe:keyoxide.org:JQTSX3JMH2G6U6UAUH5VPUP4SE"
+  },
+  "deployment": {
+    "port": 3000,
+    "trustProxy": true
   }
 }

@@ -1,19 +1,121 @@
-# dotme: formerly, Glitch in Bio
+# dotme
 
-> [!IMPORTANT]
-> This used to be a Glitch app. For now, I am running it on my own hosting.
----
+> A configurable "link-in-bio" style personal website with server-side rendering and IndieWeb support.
 
-## What's in this project?
+## Table of Contents
 
-← `README.md`: That’s this file. You can delete it, or keep it handy so you don't lose the instructions.
+- [Background](#background)
+- [Install](#install)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
 
-← `index.html`: This is the main page template the Express server uses to render your site. You'll see placeholder comments where content gets injected from `settings.json` using the template functions.
+## Background
 
-← `settings.json`: Settings for your name, links, images, and social media. The `index.html` page includes the data.
+dotme is a personal website application that creates a customizable "link-in-bio" style landing page, and includes IndieWeb markup. It uses server-side rendering with Express.js.
 
-← `templates/`: HTML templates — you can edit every line of HTML or never even look at any of it. The data you specify in `settings.json` will be built into the page using the template functions in here that return HTML strings.
+Originally forked from Glitch in Bio, this project has been restructured to use pure server-side rendering without client-side JavaScript frameworks. Content is driven by a single `settings.json` configuration file and rendered through modular HTML templates.
 
-← `public/styles/`: Stylesheets for Glitch in Bio, including alternate themes. Change your theme in `settings.json`. You can create a new theme by adding a CSS file to this folder and specifying it using its name in the settings (e.g. `glitch`, `gallery`, `menu`, or whatever yours is called!)
+Key features:
+- Server-side rendering with Express.js
+- IndieWeb microformat support (h-card, rel attributes)
+- Configurable themes and styling
+- Progressive Web App (PWA) support
+- Social media integration
+- Customizable content through a JSON configuration file
 
-← `public/manifest.json` and `public/sw.js`: These set your site up to function as a Progressive Web App (PWA)–if you add new assets (e.g. stylesheets) you can include them in the list in `sw.js` to cache your site for offline viewing.
+## Install
+
+```bash
+git clone https://github.com/yourusername/dotme.git
+cd dotme
+npm install
+```
+
+## Usage
+
+1. Configure your site by editing `settings.json`:
+   ```json
+   {
+     "name": "Your Name",
+     "bio": "Your bio text",
+     "url": "https://yoursite.com",
+     "links": [...],
+     "social": {...}
+   }
+   ```
+
+2. Start the server:
+   ```bash
+   npm start
+   ```
+
+3. Visit `http://localhost:3000` to view your site.
+
+## Configuration
+
+### Content Configuration
+
+Edit `settings.json` to customize your site:
+
+- **`name`**: Your display name
+- **`bio`**: Short biographical text
+- **`url`**: Your primary website URL (used for IndieWeb rel=me)
+- **`avatarImage`**: Primary avatar image URL
+- **`avatarImageAlt`**: Alternative avatar image (for hover effects)
+- **`links`**: Array of links to display on your page
+- **`social`**: Social media profile URLs
+- **`theme`**: Theme name (corresponds to CSS file in `public/styles/`)
+
+### Project Structure
+
+- **`index.html`**: Main page template with placeholder comments for content injection
+- **`settings.json`**: Configuration file for all site content and settings
+- **`templates/`**: HTML template modules that export render functions
+- **`public/styles/`**: CSS stylesheets including theme files
+- **`public/manifest.json`** and **`public/sw.js`**: Progressive Web App configuration
+
+### Themes
+
+Create custom themes by adding CSS files to `public/styles/` and specifying the theme name in `settings.json`. Built-in themes include `glitch`, `gallery`, `menu`, and others.
+
+## Deployment
+
+### Deployment Configuration
+
+The `deployment` section in `settings.json` controls server configuration:
+
+- **`port`**: The port number for the Express server (default: 3000)
+- **`trustProxy`**: Set to `true` if running behind a reverse proxy (nginx, Caddy, etc.) or CDN. This allows the app to correctly detect client IP addresses and HTTPS connections from proxy headers like `X-Forwarded-For` and `X-Forwarded-Proto`. Set to `false` for direct deployment.
+
+### Deployment Options
+
+**Direct deployment:**
+```json
+{
+  "deployment": {
+    "port": 3000,
+    "trustProxy": false
+  }
+}
+```
+
+**Behind reverse proxy:**
+```json
+{
+  "deployment": {
+    "port": 3000,
+    "trustProxy": true
+  }
+}
+```
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+MIT

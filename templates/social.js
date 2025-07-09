@@ -79,7 +79,8 @@ const socials = [
     { name: "tumblr", altText: "Tumblr" },
     { name: "wordpress", altText: "WordPress" },
     { name: "youtube", altText: "YouTube" },
-    { name: "bandcamp", altText: "Bandcamp" }
+    { name: "bandcamp", altText: "Bandcamp" },
+    { name: "gog", altText: "GOG" },
 ];
 
 function shuffleArray(array) {

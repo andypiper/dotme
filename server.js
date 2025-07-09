@@ -15,8 +15,19 @@ import { renderSocialIcons } from './templates/social.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Read settings for deployment configuration
+const settings = JSON.parse(await fs.readFile(path.join(__dirname, 'settings.json'), 'utf-8'));
+const port = settings.deployment?.port || 3000;
+
 const app = express();
-const port = 3000;
+
+// Disable the X-Powered-By header
+app.disable('x-powered-by');
+
+// Configure proxy trust based on settings
+if (settings.deployment?.trustProxy) {
+  app.set('trust proxy', true);
+}
 
 // Define placeholders as constants (avoid typos)
 const BODY_PLACEHOLDER = '<!-- BODY-CONTENT -->';
@@ -28,10 +39,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', async (req, res) => {
     try {
         // Asynchronously read the necessary files
-        const [indexHtml, jsonld, settings] = await Promise.all([
+        const [indexHtml, jsonld] = await Promise.all([
             fs.readFile(path.join(__dirname, 'index.html'), 'utf-8'),
-            fs.readFile(path.join(__dirname, 'templates/json-ld.json'), 'utf-8'),
-            fs.readFile(path.join(__dirname, 'settings.json'), 'utf-8').then(JSON.parse)
+            fs.readFile(path.join(__dirname, 'templates/json-ld.json'), 'utf-8')
         ]);
 
         // Build the content for the body
@@ -73,10 +83,7 @@ app.get('/', async (req, res) => {
 // Catch-all 404 handler - MUST be the last route
 app.use(async (req, res, next) => {
     try {
-        const [template404, settings] = await Promise.all([
-            fs.readFile(path.join(__dirname, 'public', '404.html'), 'utf-8'),
-            fs.readFile(path.join(__dirname, 'settings.json'), 'utf-8').then(JSON.parse)
-        ]);
+        const template404 = await fs.readFile(path.join(__dirname, 'public', '404.html'), 'utf-8');
 
         const headContent = renderMeta(settings);
         const headerHtml = renderHeader(settings);
