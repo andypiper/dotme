@@ -3,7 +3,6 @@ import { SVGs } from "./social-svgs.js"; // Note: ensure this file path is corre
 function renderSocial(settings, platform) {
   // Check that this platform exists in the settings
   if (settings.social && settings.social[platform.name]) {
-    // Return a plain string
     return `
       <a
         aria-label="${settings.name} on ${platform.name}"
