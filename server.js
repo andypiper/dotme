@@ -37,7 +37,7 @@ app.get('/', async (req, res) => {
         // Build the content for the body
         const bodyContent = [
             renderHeader(settings),
-            renderLinks(settings.links),
+            renderLinks(settings.links, settings),
             renderStatusLol(settings),
             renderNewsletter(),
             renderSocialIcons(settings),
