@@ -1,5 +1,7 @@
 # dotme
 
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+
 > A configurable "link-in-bio" style personal website with server-side rendering and IndieWeb support.
 
 ## Table of Contents
