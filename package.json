@@ -2,24 +2,12 @@
   "name": "dotme",
   "version": "1.0.0",
   "description": "My own link-in-bio app.",
-  "main": "index.html",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "build": "vite build",
-    "serve": "vite preview",
-    "release": "auto shipit"
+    "start": "node server.js"
   },
-  "devDependencies": {
-    "minimist": "^1.2.6",
-    "node-fetch": "^2.7.0",
-    "postcss": "^8.4.38",
-    "vite": "^4.5.5"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead"
-  ],
+  "devDependencies": {},
   "engines": {
     "node": "18.x"
   },
@@ -29,9 +17,6 @@
   "license": "MIT",
   "author": "Andy Piper <andypiper@omg.lol>",
   "dependencies": {
-    "braces": "^3.0.3",
-    "express": "^5.1.0",
-    "minimist": "^1.2.6",
-    "node-fetch": "^2.7.0"
+    "express": "^5.1.0"
   }
 }

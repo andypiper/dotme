@@ -11,18 +11,15 @@ self.addEventListener("install", e => {
     caches.open("glitch-in-bio-pwa").then(cache => {
       // Cache the homepage and stylesheets - add any assets you want to cache!
       return cache.addAll([
-        "/", 
+        "/",
         "/styles/style.css",
         "/styles/themes/glitch.css",
         "/styles/themes/gallery.css",
         "/styles/themes/menu.css",
         "/styles/themes/custom-theme.css",
         "/styles/themes/dusky-lory-2.css",
-        "/fonts/grotesquemt.woff",
         "/fonts/grotesquemt.woff2",
-        "/fonts/ln-notec.woff",
         "/fonts/ln-notec.woff2",
-        "/fonts/metro-nova.woff",
         "/fonts/metro-nova.woff2",
         "/fonts/open-sans.ttf"
       ]);

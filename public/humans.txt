@@ -21,7 +21,6 @@ Location: Kingston-upon-Thames, UK
 
 /* SITE */
 
-Last update: 2025/07/07
-Powered by: HTML5, CSS3, JavaScript, Glitch in Bio (Vite)
-Hosted on: Glitch.com
+Last update: 2025/07/09
+Powered by: HTML5, CSS3, JavaScript, dotme
 Language: English
