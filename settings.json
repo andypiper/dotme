@@ -133,6 +133,10 @@
   },
   "deployment": {
     "port": 3000,
-    "trustProxy": true
+    "trustProxy": true,
+    "development": {
+      "port": 5000,
+      "trustProxy": false
+    }
   }
 }

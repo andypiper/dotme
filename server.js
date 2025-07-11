@@ -17,15 +17,19 @@ const __dirname = path.dirname(__filename);
 
 // Read settings for deployment configuration
 const settings = JSON.parse(await fs.readFile(path.join(__dirname, 'settings.json'), 'utf-8'));
-const port = settings.deployment?.port || 3000;
+
+// Determine if we're in development mode
+const isDevelopment = process.env.NODE_ENV === 'development';
+const deploymentConfig = isDevelopment ? settings.deployment?.development : settings.deployment;
+const port = deploymentConfig?.port || 3000;
 
 const app = express();
 
 // Disable the X-Powered-By header
 app.disable('x-powered-by');
 
-// Configure proxy trust based on settings
-if (settings.deployment?.trustProxy) {
+// Configure proxy trust based on settings and environment
+if (deploymentConfig?.trustProxy) {
   app.set('trust proxy', true);
 }
 
@@ -35,6 +39,11 @@ const HEAD_PLACEHOLDER = '<!-- HEAD-CONTENT -->';
 
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Favicon route - redirect to configured favicon
+app.get('/favicon.ico', (req, res) => {
+    res.redirect(301, settings.favicon);
+});
 
 app.get('/', async (req, res) => {
     try {
@@ -103,5 +112,8 @@ app.use(async (req, res, next) => {
 
 app.listen(port, () => {
     console.log(`dotme app listening at http://localhost:${port}`);
+    if (isDevelopment) {
+        console.log('Running in development mode');
+    }
 });
 

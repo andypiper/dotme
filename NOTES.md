@@ -16,8 +16,9 @@ Move from Glitch to my own hosting.
 - possibly add membership badges / credentials e.g. EFF, bcs, etc.
 - add postmarks
 - consider creating sections for social icons (audio/video/gaming/code/text etc)
-- add PSN and Xbox and GOG https://www.gog.com/u/AndyPiper
+- ~✅ add PSN and Xbox and GOG <https://www.gog.com/u/AndyPiper>
 - make a module for generating a humans.txt file? So that it gets updated automatically.
+- generate settings from json-ld or vice-versa?
 - twemoji plugin (scratchpad below, but as this is, it messes with alignment)
   - nice to have because it means you have the same emoji on all platforms
   - could also just put them in as images in the list items _shrug_
