@@ -54,19 +54,6 @@
         console.warn("Service Worker not supported in this browser");
       }
     </script>
-
-    <!-- OpenMoji emoji replacement -->
-    <script>
-      function replaceEmojis() {
-        document.body.innerHTML = document.body.innerHTML.replace(/[\u{1F000}-\u{1F9FF}]|[\u{2600}-\u{26FF}]|[\u{E000}-\u{F8FF}]/gu, function(match) {
-          const codePoint = match.codePointAt(0).toString(16).toUpperCase().padStart(4, '0');
-          return `<img src="https://cdn.jsdelivr.net/npm/openmoji@latest/color/svg/${codePoint}.svg" alt="${match}" style="width:1.2em;height:1.2em;vertical-align:-0.2em;display:inline-block;" onerror="this.outerHTML='${match}';">`;
-        });
-      }
-      
-      document.addEventListener('DOMContentLoaded', replaceEmojis);
-    </script>
-
     <!-- TODO: performance; pre-connects -->
 
     <!-- HEAD-CONTENT -->
