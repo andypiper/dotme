@@ -1,3 +1,5 @@
+import { replaceEmojisWithOpenMoji } from '../utils/emoji.js';
+
 function renderLink(link, personalUrl) {
   const classes = link.url
     ? link.url.replace(/[^a-z0-9]/gi, "-").toLowerCase()
@@ -24,7 +26,7 @@ function renderLink(link, personalUrl) {
     <li class="${classes}">
       <a href="${link.url}"${rel}>
         ${link.img ? `<img src="${link.img}" alt="${link.altText}" />` : ""}
-        <span>${link.text}</span>
+        <span>${replaceEmojisWithOpenMoji(link.text)}</span>
       </a>
     </li>
   `;
