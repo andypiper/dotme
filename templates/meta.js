@@ -28,9 +28,10 @@ export const renderMeta = (settings) => `
     <meta property="og:type" content="website" />
     <meta property="fediverse:creator" content="${settings.creator}">
 
-    <!-- should be configurable in settings.json -->
+    <!-- should be configurable in settings.json via rel tag -->
     <link href="https://andypiper.org" rel="me"/>
     <link href="https://macaw.social/@andypiper" rel="me"/>
+    <link href="https://snac.lostoutpost.uk/andy" rel="me"/>
 
   <!-- Load the configured custom theme -->
   <link rel="stylesheet" type="text/css" href="./styles/themes/${settings.theme}.css" />
