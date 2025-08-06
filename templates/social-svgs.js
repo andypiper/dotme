@@ -552,6 +552,7 @@ C213.484,200.108,212.476,198.418,210.857,197.545z"
           viewBox="0 0 512 512"
           tabIndex="0"
           focusable="true"
+          fill="none"
           role="img" aria-label="Piefed">
           <g data-testid="piefed"><defs>
            <clipPath id="a" class="frame-clip frame-clip-def"><rect width="512" height="512" rx="20" ry="20" /></clipPath></defs>
