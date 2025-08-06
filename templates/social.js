@@ -81,6 +81,8 @@ const socials = [
     { name: "youtube", altText: "YouTube" },
     { name: "bandcamp", altText: "Bandcamp" },
     { name: "gog", altText: "GOG" },
+    { name: "piefed", altText: "PieFed" },
+    { name: "snac", altText: "snac" },
 ];
 
 function shuffleArray(array) {
