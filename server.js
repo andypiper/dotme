@@ -3,10 +3,8 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-// Import updated template functions
 import { renderMeta } from './templates/meta.js';
 import { renderHeader } from './templates/header.js';
-//import { renderStatusLol } from './templates/status-lol.js';
 import { renderLinks } from './templates/links.js';
 import { renderNewsletter } from './templates/newsletter.js';
 import { renderFooter } from './templates/footer.js';
@@ -57,7 +55,6 @@ app.get('/', async (req, res) => {
         const bodyContent = [
             renderHeader(settings),
             renderLinks(settings.links, settings),
-            //renderStatusLol(settings),
             renderNewsletter(),
             renderSocialIcons(settings),
             renderFooter()
