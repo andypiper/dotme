@@ -31,6 +31,12 @@
       "altText": ""
     },
     {
+      "url": "https://hackwimbledon.org",
+      "text": "🛠️ HackWimbledon",
+      "img": "",
+      "altText": ""
+    },
+    {
       "url": "https://andypiper.url.lol/fff",
       "text": "🥳 Fediverse for Freedom",
       "img": "",
@@ -39,12 +45,6 @@
     {
       "url": "https://andypiper.url.lol/podcast",
       "text": "🎧 Weekly podcast: Games at Work dot Biz",
-      "img": "",
-      "altText": ""
-    },
-    {
-      "url": "https://andypiper.url.lol/mhealth",
-      "text": "🧠️ [Medium] On living with the feelings in my head",
       "img": "",
       "altText": ""
     },
