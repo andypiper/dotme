@@ -9,6 +9,7 @@ export const renderMeta = (settings) => `
   <!-- should be configurable in settings.json -->
   <script data-goatcounter="https://dotme.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+  <script src="https://neatstats.net/view.js"></script>
 
   <!-- OpenGraph/Social sharing -->
 
