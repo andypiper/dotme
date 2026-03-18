@@ -32,6 +32,7 @@ export const renderMeta = (settings) => `
     <link href="https://andypiper.org" rel="me"/>
     <link href="https://macaw.social/@andypiper" rel="me"/>
     <link href="https://snac.lostoutpost.uk/andy" rel="me"/>
+    <link rel="human-json" href="/human.json">
 
   <!-- Load the configured custom theme -->
   <link rel="stylesheet" type="text/css" href="./styles/themes/${settings.theme}.css" />
